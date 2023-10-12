@@ -9,7 +9,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		   
-		Aluno objAluno = new Aluno(null, null);	
+		Aluno objAluno = new Aluno();	
 		
 		int opc;
 		   	int qtdProjetos = 0;
@@ -34,19 +34,35 @@ public class Main {
 				case 1: 
 					
 					System.out.println("\nNome: ");
-					objAluno.nome = entrada.nextLine();
-					System.out.println("\nCPF: ");
-					objAluno.cpf = entrada.nextLine();
-				
+					objAluno.getNome();
+					objAluno.setNome(entrada.nextLine());
 					
+					System.out.println("\nCPF: ");
+					objAluno.getCpf();
+					objAluno.setCpf(entrada.nextLine());
+					
+					System.out.println("\nNacionalidade: ");
+					objAluno.getNacionalidade();
+					objAluno.setNacionalidade(entrada.nextLine());
+					
+					
+					System.out.println("\nSexo: ");
+					objAluno.getSexo();
+					objAluno.setSexo(entrada.nextLine().charAt(0));
+					
+	
+			
 					System.out.println("\nQuantos projetos participará?");
 					qtdProjetos = entrada.nextInt();
+					
+					
 					
 					
 					for (int i = 0; i < qtdProjetos; i++) {
 						
 						System.out.println("Projeto " + (i + 1));
-						objAluno.projeto = entrada.nextLine();
+						objAluno.getProjeto();
+						objAluno.setProjeto(entrada.nextLine()); 
 						
 						
 					}
