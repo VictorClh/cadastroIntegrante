@@ -37,8 +37,7 @@ public class Main {
 					objAluno.nome = entrada.nextLine();
 					System.out.println("\nCPF: ");
 					objAluno.cpf = entrada.nextLine();
-					System.out.println("\nProjeto: ");
-					objAluno.projeto = entrada.nextLine();
+				
 					
 					System.out.println("\nQuantos projetos participará?");
 					qtdProjetos = entrada.nextInt();
@@ -46,6 +45,7 @@ public class Main {
 					
 					for (int i = 0; i < qtdProjetos; i++) {
 						
+						System.out.println("Projeto " + (i + 1));
 						objAluno.projeto = entrada.nextLine();
 						
 						
